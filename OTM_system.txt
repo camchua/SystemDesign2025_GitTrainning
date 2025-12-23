@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+
+actor "学生" as Student
+actor "教員" as Teacher
+
+package "el-campus" {
+
+  usecase "グイン" as UC1
+  usecase "課題をダウンロード" as UC3
+  usecase "ダウンロード完了"" as UC4
+  usecase "課題を回収" as UC5
+  usecase "課題を提出ください"" as UC6
+  usecase "課題を提出" as UC7
+}
+
+Student --> UC1
+Student --> UC3
+Student --> UC7
+
+Teacher --> UC1
+Teacher --> UC5
+Teacher --> UC6
+
+UC3 --> UC4
+UC5 --> UC6
+
+@enduml
