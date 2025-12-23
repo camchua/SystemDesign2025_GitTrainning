@@ -1,0 +1,12 @@
+@startuml
+participant Client
+participant Server
+participant Database
+
+Client -> Server :データを要求
+Server -> Database:お問い合せ
+
+Server <-- Database : 結果
+Client <-- Server : データ
+
+@enduml
