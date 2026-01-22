@@ -1,0 +1,13 @@
+@startuml
+autonumber
+
+participant "Main Function" as Main
+participant "calculate()" as Calc
+participant "getInput()" as Input
+
+Main -> Calc : データを計算する
+Calc -> Input : 入力データ要求
+Input --> Calc : 入力データ
+Calc --> Main : 計算結果
+
+@enduml
